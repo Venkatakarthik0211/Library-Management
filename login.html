@@ -5,6 +5,12 @@
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     <meta name="google-signin-client_id" content="373849952788-p0kqhv3af3j9h3m047cstg4ic3kt4am1.apps.googleusercontent.com">
     <script>
+        gapi.load('auth2', function() {
+        gapi.auth2.init({
+            client_id: '373849952788-p0kqhv3af3j9h3m047cstg4ic3kt4am1.apps.googleusercontent.com',
+            redirect_uri: 'https://venkatakarthik0211.github.io/Library-Management/',
+        });
+    });
         function renderButton() {
             gapi.signin2.render('my-signin2', {
                 'scope': 'profile email',
