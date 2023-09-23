@@ -51,7 +51,7 @@ books.forEach((book) => {
 // Function to perform a Google search based on the book title
 function searchGoogle(title) {
     const searchQuery = encodeURIComponent(title);
-    const googleSearchUrl = `https://www.google.com/search?q=${searchQuery}`;
+    const googleSearchUrl = `https://www.google.com/search?q=Related books like ${searchQuery}`;
     window.open(googleSearchUrl, "_blank");
 }
 

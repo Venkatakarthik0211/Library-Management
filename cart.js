@@ -7,10 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cartData && cartData.length > 0) {
         cartData.forEach((item) => {
             const row = document.createElement("tr");
+
+            // Calculate and update the Available quantity
+            const availableAfterPurchase = item.available - item.quantity;
+
             row.innerHTML = `
                 <td>${item.id}</td>
                 <td>${item.title}</td>
                 <td>${item.author}</td>
+                <td>${availableAfterPurchase}</td> <!-- Display the updated Available quantity -->
                 <td>${item.quantity}</td>
             `;
 
@@ -19,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         // Handle the case where the cart is empty
         const emptyRow = document.createElement("tr");
-        emptyRow.innerHTML = "<td colspan='4'>Your cart is empty</td>";
+        emptyRow.innerHTML = "<td colspan='5'>Your cart is empty</td>";
         cartListContainer.appendChild(emptyRow);
     }
 });

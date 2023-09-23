@@ -1,65 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width,
-                         initial-scale=1.0">
-    <title>Library Managament</title>
-    <link rel="stylesheet"
-          href="login.css">
-</head>
- 
-<body>
-    <header>
-        <h1 class="heading">Library Managament</h1>
-        <h3 class="title">Login & Registration Form</h3>
-    </header>
- 
-    <!-- container div -->
-    <div class="container">
- 
-        <!-- upper button section to select
-             the login or signup form -->
-        <div class="slider"></div>
-        <div class="btn">
-            <button class="login">Login</button>
-            <button class="signup">Signup</button>
-        </div>
- 
-        <!-- Form section that contains the
-             login and the signup form -->
-        <div class="form-section">
- 
-            <!-- login form -->
-            <div class="login-box">
-                <input type="email"
-                       class="email ele"
-                       placeholder="youremail@email.com">
-                <input type="password"
-                       class="password ele"
-                       placeholder="password">
-                <button class="clkbtn">Login</button>
-            </div>
- 
-            <!-- signup form -->
-            <div class="signup-box">
-                <input type="text"
-                       class="name ele"
-                       placeholder="Enter your name">
-                <input type="email"
-                       class="email ele"
-                       placeholder="youremail@email.com">
-                <input type="password"
-                       class="password ele"
-                       placeholder="password">
-                <input type="password"
-                       class="password ele"
-                       placeholder="Confirm password">
-                <button class="clkbtn">Signup</button>
-            </div>
-        </div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up | Log In</title>
+    <link rel="stylesheet" href="login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+       <div class="title-text">
+          <div class="title login">
+             Account 
+          </div>
+          <div class="title signup">
+             Account
+          </div>
+       </div>
+       <div class="form-container">
+          <div class="slide-controls">
+             <input type="radio" name="slide" id="login" checked>
+             <input type="radio" name="slide" id="signup">
+             <label for="login" class="slide login">Login</label>
+             <label for="signup" class="slide signup">SignUp</label>
+             <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+             <form action="#" class="login">
+                <div class="field">
+                   <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                   <input type="password" placeholder="Password" required>
+                </div>
+                <div class="pass-link">
+                   <a href="#">Reset password?</a>
+                </div>
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input type="submit" value="Login">
+                </div>
+                <div class="signup-link">
+                   Don't Have Account? <a href="">Create A New</a>
+                </div>
+             </form>
+             <form action="#" class="signup">
+                <div class="field">
+                   <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                   <input type="password" placeholder="Password" required>
+                </div>
+                <div class="field">
+                   <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input type="submit" value="SignUp">
+                </div>
+             </form>
+          </div>
+       </div>
     </div>
     <script src="login.js"></script>
-</body>
+  </body>
 </html>
