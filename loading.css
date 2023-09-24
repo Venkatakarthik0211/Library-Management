@@ -5,7 +5,8 @@
   }
   
   body {
-    background: #000000cb;
+    background-color: #e9aef5;
+    background: linear-gradient(to bottom, white, rgb(227, 177, 218), rgb(198, 198, 246));
   }
   
   .wrapper {
@@ -22,7 +23,7 @@
   }
   
   .loader .loading {
-    background: #fff;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(198, 198, 246));
     width: 30px;
     height: 30px;
     border-radius: 50px;
