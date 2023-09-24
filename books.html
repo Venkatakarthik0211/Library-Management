@@ -77,10 +77,8 @@
             { id: 2, title: "Book 2", author: "Author 2", subject: "Mystery", publishDate: "2021-05-20" },
             { id: 3, title: "Book 3", author: "Author 1", subject: "Science Fiction", publishDate: "2020-12-10" },
             { id: 4, title: "Book 4", author: "Author 2", subject: "Mystery", publishDate: "2022-03-08" },
-            // Add more book data here...
         ];
 
-        // Function to create a table row for a book
         function createBookTableRow(book) {
             const row = document.createElement("tr");
             row.innerHTML = `
@@ -92,15 +90,11 @@
             `;
             return row;
         }
-
-        // Display the list of books in the table
         const bookListContainer = document.getElementById("book-list");
         books.forEach((book) => {
             const row = createBookTableRow(book);
             bookListContainer.appendChild(row);
         });
-
-        // Sort the table by column index
         function sortTable(columnIndex) {
             const table = document.querySelector("table");
             const tbody = document.querySelector("tbody");
@@ -116,8 +110,6 @@
                 tbody.appendChild(row);
             });
         }
-
-        // Filter the table based on input values
         function filterBooks() {
             const titleInput = document.querySelector('input[placeholder="Filter by Title"]').value.toLowerCase();
             const authorInput = document.querySelector('input[placeholder="Filter by Author"]').value.toLowerCase();

@@ -18,6 +18,8 @@ body {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #e9aef5;
+    background: linear-gradient(to bottom, white, rgb(227, 177, 218), rgb(198, 198, 246));
 }
 
 /* Style the table */

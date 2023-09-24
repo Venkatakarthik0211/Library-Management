@@ -1,70 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Sign Up | Log In</title>
-    <link rel="stylesheet" href="login.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <div class="wrapper">
-       <div class="title-text">
-          <div class="title login">
-             Account 
-          </div>
-          <div class="title signup">
-             Account
-          </div>
-       </div>
-       <div class="form-container">
-          <div class="slide-controls">
-             <input type="radio" name="slide" id="login" checked>
-             <input type="radio" name="slide" id="signup">
-             <label for="login" class="slide login">Login</label>
-             <label for="signup" class="slide signup">SignUp</label>
-             <div class="slider-tab"></div>
-          </div>
-          <div class="form-inner">
-             <form action="#" class="login">
-                <div class="field">
-                   <input type="text" placeholder="Email Address" required>
-                </div>
-                <div class="field">
-                   <input type="password" placeholder="Password" required>
-                </div>
-                <div class="pass-link">
-                   <a href="#">Reset password?</a>
-                </div>
-                <div class="field btn">
-                   <div class="btn-layer"></div>
-                   <input type="submit" value="Login">
-                </div>
-                <div class="signup-link">
-                   Don't Have Account? <a href="">Create A New</a>
-                </div>
-             </form>
-             <form action="#" class="signup">
-                <div class="field">
-                   <input type="text" placeholder="Email Address" required>
-                </div>
-                <div class="field">
-                   <input type="password" placeholder="Password" required>
-                </div>
-                <div class="field">
-                   <input type="password" placeholder="Confirm Password" required>
-                </div>
-                <div class="field btn">
-                   <div class="btn-layer"></div>
-                   <input type="submit" value="SignUp">
-                </div>
-             </form>
-          </div>
-       </div>
-    </div>
-    <script src="login.js"></script>
-  </body>
-</html>
-<a href="#">Or?</a>
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
@@ -82,7 +16,6 @@
                 'onfailure': onFailure
             });
         }
-
         // Sign-in success callback
         function onSuccess(googleUser) {
             // Get the google profile data
@@ -105,8 +38,8 @@
         }
 
         // Sign-in failure callback
-        function onFailure(error) {
-            alert(error);
+        function onFailure() {
+            alert("Failed to Sign-in");
         }
 
         // Sign out the user
@@ -118,7 +51,6 @@
                 document.getElementsByClassName("userContent")[0].style.display = "none";
                 document.getElementById("gSignIn").style.display = "block";
             });
-
             auth2.disconnect();
         }
     </script>
@@ -155,22 +87,26 @@
 
         .login-box input[type="text"],
         .login-box input[type="password"] {
-            width: 100%;
+            width: 90%;
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
         }
 
-        #loginButton {
-            width: 100%;
+        #loginButton, #signupButton {
+            width: 98%;
             padding: 10px;
             background-color: #007BFF;
             color: #fff;
             border: none;
             cursor: pointer;
+            margin-top: 10px;
         }
 
         #loginButton:hover {
+            background-color: #0056b3;
+        }  
+        #signupButton:hover {
             background-color: #0056b3;
         }
 
@@ -190,9 +126,22 @@
 </head>
 <body>
     <div class="container">
+      <div class="login-box">
+         <label for="email">Email:</label>
+         <input type="text" id="email" name="email">
+         
+         <label for="password">Password:</label>
+         <input type="password" id="password" name="password">
+         
+         <button id="loginButton">Login</button>
+         <button id="signupButton">New to Library?</button>
+     </div>
+        <div class="login-box">
+         <div id="my-signin2"></div>
+         <div class="userContent"></div>
         </div>
-        <div id="my-signin2"></div>
-        <div class="userContent"></div>
     </div>
+    <script src="login.js"></script>
+    <script src="login.js"></script>
 </body>
 </html> 
